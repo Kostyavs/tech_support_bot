@@ -16,4 +16,5 @@ def start_disp():
     disp.add_handler(CommandHandler('help_me', start.help_me))
     disp.add_handler(CommandHandler('new_operator', start.new_operator))
     disp.add_handler(CommandHandler('delete_operator', start.delete_operator))
+    disp.add_handler(CommandHandler('clear_db', start.clear_db))
     return updater

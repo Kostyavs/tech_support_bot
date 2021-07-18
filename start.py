@@ -56,3 +56,8 @@ def delete_operator(update, context):
     id = update.message.from_user.id
     db.delete_operator(id)
     context.bot.send_message(chat_id=id, text='Successfully deleted!')
+
+
+def clear_db(update, context):
+    db.clear_all()
+    context.bot.send_message(chat_id=id, text='Successfully deleted!')

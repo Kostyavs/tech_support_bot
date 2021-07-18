@@ -91,6 +91,14 @@ def stop_conv(client, operator):
     connection.commit()
 
 
+def clear_all():
+    connection = sqlite3.connect('db.sqlite')
+    cursor = connection.cursor()
+    cursor.execute("DELETE FROM operators")
+    cursor.execute("DELETE FROM conversation")
+    connection.commit()
+
+
 if __name__ == '__main__':
     connection = sqlite3.connect('db.sqlite')
     cursor = connection.cursor()
